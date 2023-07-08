@@ -1,0 +1,4 @@
+name: BetterChat
+version: '1.0-SNAPSHOT'
+main: com.rosed.betterchat.BetterChat
+api-version: '1.19'
