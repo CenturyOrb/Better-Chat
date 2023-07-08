@@ -1,0 +1,4 @@
+name: BetterChat
+version: '${project.version}'
+main: com.rosed.betterchat.BetterChat
+api-version: '1.19'
