@@ -1,4 +1,4 @@
-package com.rosed.betterchat.managerA;
+package com.rosed.betterchat.manager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
