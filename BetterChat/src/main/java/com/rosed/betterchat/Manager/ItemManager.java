@@ -34,9 +34,9 @@ public class ItemManager {
 
         ShapedRecipe megaphoneRecipe = new ShapedRecipe(new NamespacedKey(betterChat, "megaphone"), megaphoneStack);
         megaphoneRecipe.shape(
-                "IRI",
-                "IGI",
-                "III");
+                "II ",
+                "RGI",
+                "II ");
 
         megaphoneRecipe.setIngredient('G', Material.GOAT_HORN);
         megaphoneRecipe.setIngredient('I', Material.IRON_INGOT);
