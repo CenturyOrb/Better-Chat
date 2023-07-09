@@ -1,5 +1,6 @@
 package com.rosed.betterchat.Command;
 
+import com.rosed.betterchat.Item.ItemManager;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -33,21 +34,11 @@ public class MegaphoneCommand implements CommandExecutor {
 
         // check for perms
         if (player.hasPermission("better-chat.megaphone"))   {
-            player.sendMessage(ChatColor.GREEN + "You have been given the " + ChatColor.GOLD + "Megaphone");
 
             // give the player the megaphone
-            ItemStack megaphoneStack = new ItemStack(Material.GOAT_HORN);
-            ItemMeta megaphoneMeta = megaphoneStack.getItemMeta();
-            megaphoneMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&dMegaphone"));
-            megaphoneMeta.setLocalizedName("better-chat.megaphoneitem");
-            List<String> megaphoneLore = new ArrayList<>();
-            megaphoneLore.add(ChatColor.translateAlternateColorCodes('&', "&5Hold to increase your range"));
-            megaphoneMeta.setLore(megaphoneLore);
-            megaphoneMeta.addEnchant(Enchantment.MENDING, 1, true);
-            megaphoneMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-            megaphoneStack.setItemMeta(megaphoneMeta);
+            player.getInventory().addItem(ItemManager.getMegaphoneStack());
+            player.sendMessage(ChatColor.GREEN + "You have been given the " + ChatColor.GOLD + "Megaphone");
 
-            player.getInventory().addItem(megaphoneStack);
         } else  {
             player.sendMessage(ChatColor.RED + "You don't have permission to use " + ChatColor.GOLD + "/megaphone");
         }

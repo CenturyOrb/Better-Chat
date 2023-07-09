@@ -1,6 +1,7 @@
 package com.rosed.betterchat;
 
 import com.rosed.betterchat.Command.MegaphoneCommand;
+import com.rosed.betterchat.Item.ItemManager;
 import com.rosed.betterchat.Listener.PlayerChatListener;
 import com.rosed.betterchat.Listener.PlayerJoinListener;
 import com.rosed.betterchat.Listener.PlayerQuitListener;
@@ -14,6 +15,7 @@ public final class BetterChat extends JavaPlugin {
 
     private ConfigManager configManager;
     private PlayerManager playerManager;
+    private ItemManager itemManager;
 
     @Override
     public void onEnable() {
@@ -29,6 +31,7 @@ public final class BetterChat extends JavaPlugin {
         // register managers
         configManager = new ConfigManager(this);
         playerManager = new PlayerManager();
+        itemManager = new ItemManager();
 
         // register events
         Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(playerManager), this);
