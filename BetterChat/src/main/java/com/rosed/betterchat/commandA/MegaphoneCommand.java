@@ -1,6 +1,6 @@
-package com.rosed.betterchat.command;
+package com.rosed.betterchat.commandA;
 
-import com.rosed.betterchat.manager.ItemManager;
+import com.rosed.betterchat.managerA.ItemManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

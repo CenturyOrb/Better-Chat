@@ -1,4 +1,4 @@
-package com.rosed.betterchat.manager;
+package com.rosed.betterchat.managerA;
 
 import com.rosed.betterchat.BetterChat;
 

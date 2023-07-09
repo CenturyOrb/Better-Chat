@@ -1,12 +1,12 @@
 package com.rosed.betterchat;
 
-import com.rosed.betterchat.command.MegaphoneCommand;
-import com.rosed.betterchat.manager.ItemManager;
-import com.rosed.betterchat.listener.PlayerChatListener;
-import com.rosed.betterchat.listener.PlayerJoinListener;
-import com.rosed.betterchat.listener.PlayerQuitListener;
-import com.rosed.betterchat.manager.ConfigManager;
-import com.rosed.betterchat.manager.PlayerManager;
+import com.rosed.betterchat.commandA.MegaphoneCommand;
+import com.rosed.betterchat.managerA.ItemManager;
+import com.rosed.betterchat.listenerA.PlayerChatListener;
+import com.rosed.betterchat.listenerA.PlayerJoinListener;
+import com.rosed.betterchat.listenerA.PlayerQuitListener;
+import com.rosed.betterchat.managerA.ConfigManager;
+import com.rosed.betterchat.managerA.PlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
