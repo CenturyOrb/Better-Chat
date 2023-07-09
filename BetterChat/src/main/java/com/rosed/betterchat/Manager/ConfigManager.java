@@ -7,6 +7,7 @@ public class ConfigManager {
     private BetterChat betterChat;
     private static int configRadius;
     private static int configMegaphoneRadius;
+    private static String unheardMessage;
 
     public ConfigManager(BetterChat betterChat)   {
 
@@ -16,6 +17,7 @@ public class ConfigManager {
 
         configRadius = betterChat.getConfig().getInt("proximity-radius");
         configMegaphoneRadius = betterChat.getConfig().getInt("megaphone-proximity-radius");
+        unheardMessage = betterChat.getConfig().getString("unheard-message");
 
     }
 
@@ -30,5 +32,12 @@ public class ConfigManager {
      * @return megaphone radius
      */
     public static int getConfigMegaphoneRadius()   { return configMegaphoneRadius; }
+
+    /**
+     * gets the unheard message that will send to the chat sender
+     * if no one close enough
+     * @return unheard message
+     */
+    public static String getUnheardMessage()   { return unheardMessage; }
 
 }

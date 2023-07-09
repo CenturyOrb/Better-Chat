@@ -56,7 +56,7 @@ public class PlayerChatListener implements Listener {
 
         // send message if there are no viewers nearby
         if (0 >= e.viewers().size() - 2) {
-            chatSender.sendMessage(ChatColor.RED + "No one heard your message");
+            chatSender.sendMessage(ChatColor.translateAlternateColorCodes('&', ConfigManager.getUnheardMessage()));
             e.setCancelled(true);
         }
 
