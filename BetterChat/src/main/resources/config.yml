@@ -9,7 +9,7 @@
 ############################################################
 
 # Radius of proximity chat
-Proximity-radius: 10
+proximity-radius: 10
 
-# Added radius of proximity chat when holding Megaphone
-Added-proximity-radius: 10
+# Proximity radius after holding a megaphone
+megaphone-proximity-radius: 20
