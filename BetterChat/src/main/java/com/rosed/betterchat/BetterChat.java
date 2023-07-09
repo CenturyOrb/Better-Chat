@@ -19,7 +19,6 @@ public final class BetterChat extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         register();
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&aBetterChat has started!"));
     }
 
     /**
