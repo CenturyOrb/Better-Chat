@@ -1,0 +1,15 @@
+# BetterChat Made by _nitey
+# Paper 1.19.2
+# Discord : .rosed
+
+############################################################
+# +------------------------------------------------------+ #
+# |              BetterChat Proximity Chat               | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Radius of proximity chat
+Proximity-radius: 10
+
+# Added radius of proximity chat when holding Megaphone
+Added-proximity-radius: 10

@@ -2,3 +2,9 @@ name: BetterChat
 version: '${project.version}'
 main: com.rosed.betterchat.BetterChat
 api-version: '1.19'
+commands:
+  megaphone:
+permissions:
+  better-chat.megaphone:
+    default: op
+
