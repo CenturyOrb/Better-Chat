@@ -3,16 +3,11 @@ package com.rosed.betterchat.Listener;
 import com.rosed.betterchat.Manager.ConfigManager;
 import com.rosed.betterchat.Manager.PlayerManager;
 import io.papermc.paper.event.player.AsyncChatEvent;
-import net.kyori.adventure.audience.Audience;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class PlayerChatListener implements Listener {
 
@@ -61,7 +56,7 @@ public class PlayerChatListener implements Listener {
 
         // send message if there are no viewers nearby
         if (0 >= e.viewers().size() - 2) {
-            chatSender.sendMessage(ChatColor.RED + "No one heard your message");
+            chatSender.sendMessage(ChatColor.translateAlternateColorCodes('&', ConfigManager.getUnheardMessage()));
             e.setCancelled(true);
         }
 
