@@ -1,0 +1,20 @@
+# BetterChat Made by _nitey
+# Paper 1.19.2
+# Discord : .rosed
+
+############################################################
+# +------------------------------------------------------+ #
+# |              BetterChat Proximity Chat               | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Radius of proximity chat
+proximity-radius: 20
+
+# Proximity radius after holding a megaphone
+megaphone-proximity-radius: 100
+
+# Message sent to the chat sender if no one heard them
+# Use color codes found here: https://mcutils.com/color-codes
+# Replace the '§' with a '&'
+unheard-message: '&c(&6&l!&c) No one heard your message'
