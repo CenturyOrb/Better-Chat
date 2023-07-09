@@ -1,7 +1,7 @@
-package com.rosed.betterchat.listenerA;
+package com.rosed.betterchat.listener;
 
-import com.rosed.betterchat.managerA.ConfigManager;
-import com.rosed.betterchat.managerA.PlayerManager;
+import com.rosed.betterchat.manager.ConfigManager;
+import com.rosed.betterchat.manager.PlayerManager;
 import io.papermc.paper.event.player.AsyncChatEvent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

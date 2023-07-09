@@ -1,6 +1,6 @@
-package com.rosed.betterchat.listenerA;
+package com.rosed.betterchat.listener;
 
-import com.rosed.betterchat.managerA.PlayerManager;
+import com.rosed.betterchat.manager.PlayerManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
