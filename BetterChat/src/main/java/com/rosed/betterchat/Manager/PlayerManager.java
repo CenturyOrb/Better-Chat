@@ -3,16 +3,16 @@ package com.rosed.betterchat.Manager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PlayerManager {
 
-    private List<Player> players;
+    private Set<Player> players;
 
     public PlayerManager()   {
 
-        players = new ArrayList<>();
+        players = new HashSet<>();
         players.addAll(Bukkit.getOnlinePlayers());
 
     }
@@ -21,6 +21,6 @@ public class PlayerManager {
      * returns online players
      * @return
      */
-    public List<Player> getPlayers()   { return players; }
+    public Set<Player> getPlayers()   { return players; }
 
 }

@@ -48,8 +48,6 @@ public class PlayerChatListener implements Listener {
             radius = ConfigManager.getConfigMegaphoneRadius();
         }
 
-        chatSender.sendMessage(ChatColor.GREEN + "Your chat radius is: " + radius);
-
         // remove viewers if the viewer isn't close enough
         for (Player player : playerManager.getPlayers())   {
             if (chatSender.getLocation().distance(player.getLocation()) > radius)   {
