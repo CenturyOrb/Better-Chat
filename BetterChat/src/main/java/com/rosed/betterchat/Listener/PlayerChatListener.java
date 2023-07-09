@@ -48,9 +48,13 @@ public class PlayerChatListener implements Listener {
             radius = ConfigManager.getConfigMegaphoneRadius();
         }
 
+        // remove viewers if the viewer isn't in the same world
         // remove viewers if the viewer isn't close enough
         for (Player player : playerManager.getPlayers())   {
-            if (chatSender.getLocation().distance(player.getLocation()) > radius)   {
+
+            if (chatSender.getWorld() != player.getWorld())   {
+                e.viewers().remove(player);
+            } else if (chatSender.getLocation().distance(player.getLocation()) > radius)   {
                 e.viewers().remove(player);
             }
         }
