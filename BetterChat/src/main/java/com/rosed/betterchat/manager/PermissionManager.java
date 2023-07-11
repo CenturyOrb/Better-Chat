@@ -50,9 +50,8 @@ public class PermissionManager {
         if (set)   {
             attachment.setPermission(permission, set);
         } else {
-            attachment.setPermission(permission, set);
+            attachment.unsetPermission(permission);
         }
-
 
     }
 

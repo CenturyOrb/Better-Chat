@@ -28,7 +28,7 @@ public class PlayerChatListener implements Listener {
 
         Player chatSender = e.getPlayer();
 
-        if (!chatSender.hasPermission("better-chat.chat"))   {
+        if (!chatSender.hasPermission("better-chat.muted"))   {
             chatSender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c(&6&l!&c) You have been muted!"));
             e.setCancelled(true);
         }
