@@ -53,7 +53,6 @@ public class PermissionManager {
             attachment.unsetPermission(permission);
         }
 
-
     }
 
     /**
