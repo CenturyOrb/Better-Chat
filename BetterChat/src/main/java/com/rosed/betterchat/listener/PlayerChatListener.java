@@ -27,6 +27,13 @@ public class PlayerChatListener implements Listener {
     public void onPlayerChatEvent(AsyncChatEvent e)   {
 
         Player chatSender = e.getPlayer();
+
+        if (!chatSender.hasPermission("better-chat.chat"))   {
+            e.setCancelled(true);
+            chatSender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c(&6&l!&c) You have been muted!"));
+            return;
+        }
+
         int radius = ConfigManager.getConfigRadius();
 
         // check if the player is holding the megaphone
