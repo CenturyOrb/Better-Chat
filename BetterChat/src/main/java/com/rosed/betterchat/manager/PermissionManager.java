@@ -43,14 +43,18 @@ public class PermissionManager {
         if (!perms.containsKey(player.getUniqueId()))   {
             attachment = player.addAttachment(betterChat);
             perms.put(player.getUniqueId(), attachment);
+            System.out.println("a");
         } else {
             attachment = perms.get(player.getUniqueId());
+            System.out.println("b");
         }
 
         if (set)   {
             attachment.setPermission(permission, set);
+            System.out.println(1);
         } else {
-            attachment.unsetPermission(permission);
+            attachment.setPermission(permission, set);
+            System.out.println(2);
         }
 
 

@@ -29,9 +29,8 @@ public class PlayerChatListener implements Listener {
         Player chatSender = e.getPlayer();
 
         if (!chatSender.hasPermission("better-chat.chat"))   {
-            e.setCancelled(true);
             chatSender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c(&6&l!&c) You have been muted!"));
-            return;
+            e.setCancelled(true);
         }
 
         int radius = ConfigManager.getConfigRadius();
