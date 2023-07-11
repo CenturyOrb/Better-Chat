@@ -7,4 +7,5 @@ commands:
 permissions:
   better-chat.megaphone:
     default: op
-
+  better-chat.chat:
+    default: true
