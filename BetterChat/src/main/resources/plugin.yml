@@ -4,8 +4,11 @@ main: com.rosed.betterchat.BetterChat
 api-version: '1.19'
 commands:
   megaphone:
+  mute:
 permissions:
   better-chat.megaphone:
     default: op
   better-chat.chat:
     default: true
+  better-chat.mute:
+    default: op

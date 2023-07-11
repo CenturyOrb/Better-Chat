@@ -27,6 +27,9 @@ public class PlayerChatListener implements Listener {
     public void onPlayerChatEvent(AsyncChatEvent e)   {
 
         Player chatSender = e.getPlayer();
+
+        chatSender.sendMessage(chatSender.hasPermission("better-chat.chat") + "");
+
         int radius = ConfigManager.getConfigRadius();
 
         // check if the player is holding the megaphone

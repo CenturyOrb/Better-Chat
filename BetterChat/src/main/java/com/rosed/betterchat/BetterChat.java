@@ -1,6 +1,7 @@
 package com.rosed.betterchat;
 
 import com.rosed.betterchat.command.MegaphoneCommand;
+import com.rosed.betterchat.command.MuteCommand;
 import com.rosed.betterchat.manager.ItemManager;
 import com.rosed.betterchat.listener.PlayerChatListener;
 import com.rosed.betterchat.listener.PlayerJoinListener;
@@ -39,6 +40,7 @@ public final class BetterChat extends JavaPlugin {
 
         // register commands
         getCommand("megaphone").setExecutor(new MegaphoneCommand());
+        getCommand("mute").setExecutor(new MuteCommand(playerManager));
 
     }
 
