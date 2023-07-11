@@ -47,7 +47,12 @@ public class PermissionManager {
             attachment = perms.get(player.getUniqueId());
         }
 
-        attachment.setPermission(permission, set);
+        if (set)   {
+            attachment.setPermission(permission, set);
+        } else {
+            attachment.unsetPermission(permission);
+        }
+
 
     }
 
