@@ -33,8 +33,13 @@ public class MuteCommand implements CommandExecutor {
         if (args.length == 1)   {
             String playerName = args[0];
             if (playerManager.getPlayers().contains(Bukkit.getPlayer(playerName)))   {
-                permissionManager.setPlayerPermission(Bukkit.getPlayer(playerName), "better-chat.chat", false);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6You have muted &c" + playerName));
+                if (Bukkit.getPlayer(playerName).hasPermission("better-chat.chat"))   {
+                    permissionManager.setPlayerPermission(Bukkit.getPlayer(playerName), "better-chat.chat", false);
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6You have muted &c" + playerName));
+                } else {
+                    permissionManager.setPlayerPermission(Bukkit.getPlayer(playerName), "better-chat.chat", true);
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6You have unmuted &c" + playerName));
+                }
             } else {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c" + playerName + " &6is not online"));
             }
