@@ -31,7 +31,7 @@ public class StaffCommand implements CommandExecutor {
 
             player.sendMessage("message: " + message + " userName: " + userName);
             player.sendMessage("final message: " + formattedMessage);
-            Bukkit.broadcast(formattedMessage, "better-chat.staffchat");
+            Bukkit.broadcast(ChatColor.translateAlternateColorCodes('&', formattedMessage), "better-chat.staffchat");
 
         } else {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c(&6&l!&c) Invalid message"));

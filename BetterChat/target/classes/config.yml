@@ -31,4 +31,4 @@
   # Available placeholders:
   # {MESSAGE} - The content of the chat message.
   # {USERNAME} - The sender's username.
-  staff-format: '&9[STAFF] &d{USERNAME}&7: &f{MESSAGE}'
+  staff-format: '&9[STAFF] &a{USERNAME}&7: &f{MESSAGE}'
