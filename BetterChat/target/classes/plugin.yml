@@ -5,10 +5,13 @@ api-version: '1.19'
 commands:
   megaphone:
   mute:
+  schat:
 permissions:
   better-chat.megaphone:
     default: op
   better-chat.muted:
     default: false
   better-chat.mute:
+    default: op
+  better-chat.staffchat:
     default: op

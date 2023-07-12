@@ -28,7 +28,11 @@ public class MuteCommand implements CommandExecutor {
         if (!(sender instanceof Player))   { return false; }
         Player player = (Player) sender;
 
-        if (!player.hasPermission("better-chat.mute"))   { return false; }
+        if (!player.hasPermission("better-chat.mute"))   {
+            player.sendMessage(ChatColor.RED + "You don't have permission to use " + ChatColor.GOLD + "/mute");
+            return false;
+        }
+
 
         if (args.length == 1)   {
             String playerName = args[0];
@@ -47,6 +51,8 @@ public class MuteCommand implements CommandExecutor {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c" + playerName + " &6is not online"));
             }
 
+        } else {
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c(&6&l!&c) Invalid Player"));
         }
 
         return false;
