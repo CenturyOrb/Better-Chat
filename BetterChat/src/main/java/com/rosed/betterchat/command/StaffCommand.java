@@ -26,9 +26,11 @@ public class StaffCommand implements CommandExecutor {
             String formattedMessage = ConfigManager.getStaffFormat();
             String message = args[0];
             String userName = player.getName();
-            formattedMessage.replace("{USERNAME}", userName);
-            formattedMessage.replace("{MESSAGE}", message);
+            formattedMessage = formattedMessage.replace("{USERNAME}", userName);
+            formattedMessage = formattedMessage.replace("{MESSAGE}", message);
 
+            player.sendMessage("message: " + message + " userName: " + userName);
+            player.sendMessage("final message: " + formattedMessage);
             Bukkit.broadcast(formattedMessage, "better-chat.staffchat");
 
         } else {
