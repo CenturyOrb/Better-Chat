@@ -8,6 +8,7 @@ public class ConfigManager {
     private static int configRadius;
     private static int configMegaphoneRadius;
     private static String unheardMessage;
+    private static String staffFormat;
 
     public ConfigManager(BetterChat betterChat)   {
 
@@ -18,6 +19,7 @@ public class ConfigManager {
         configRadius = betterChat.getConfig().getInt("proximity-radius");
         configMegaphoneRadius = betterChat.getConfig().getInt("megaphone-proximity-radius");
         unheardMessage = betterChat.getConfig().getString("unheard-message");
+        staffFormat = betterChat.getConfig().getString("staff-format");
 
     }
 
@@ -40,4 +42,9 @@ public class ConfigManager {
      */
     public static String getUnheardMessage()   { return unheardMessage; }
 
+    /**
+     * gets staff chat format from config
+     * @return staff chat format
+     */
+    public static String getStaffFormat()   { return staffFormat; }
 }
